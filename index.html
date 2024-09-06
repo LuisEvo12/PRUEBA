@@ -22,7 +22,6 @@
             align-items: center;
             justify-content: center;
             padding: 20px 10px;
-            position: relative;
             text-align: center;
         }
 
@@ -33,7 +32,7 @@
         }
 
         .header h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin: 0;
         }
 
@@ -60,21 +59,20 @@
 
         .action-buttons {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            flex-direction: column;
             margin-bottom: 20px;
         }
 
         .action-buttons button {
-            flex: 1;
-            margin: 5px;
+            margin: 5px 0;
             font-size: 1rem;
-            padding: 10px 15px;
+            padding: 10px;
             background-color: #343a40;
             color: #fff;
             border: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            cursor: pointer;
         }
 
         .action-buttons button:hover {
@@ -93,6 +91,18 @@
             padding: 10px 0;
             margin-top: 20px;
         }
+
+        @media (min-width: 768px) {
+            .action-buttons {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .action-buttons button {
+                flex: 1;
+                margin: 5px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,9 +114,9 @@
 
 <div class="contact-info container">
     <div class="action-buttons">
-        <button class="btn"><i class="fas fa-phone-alt"></i> LLAMAR</button>
-        <button class="btn"><i class="fas fa-envelope"></i> EMAIL</button>
-        <button class="btn"><i class="fas fa-map-marker-alt"></i> DIRECCIONES</button>
+        <button class="btn" onclick="window.location.href='tel:2299608045'"><i class="fas fa-phone-alt"></i> LLAMAR</button>
+        <button class="btn" onclick="window.location.href='mailto:victor.cruz@tendsagroup.com'"><i class="fas fa-envelope"></i> EMAIL</button>
+        <button class="btn" onclick="window.location.href='https://www.google.com/maps/search/?api=1&query=Águilas+558,+Veracruz,+Veracruz+91790,+México'"><i class="fas fa-map-marker-alt"></i> DIRECCIONES</button>
         <button class="btn" onclick="toggleMap()"><i class="fas fa-map"></i> MOSTRAR MAPA</button>
     </div>
 
